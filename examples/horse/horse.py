@@ -12,12 +12,11 @@ graph = mapper.map(lens,
                    data,
                    clusterer=km.cluster.DBSCAN(eps=0.3, min_samples=3),
                    nr_cubes=25,
-                   #link_local=False,
                    overlap_perc=0.3)
 
 
 mapper.visualize(graph,
-                 graph_gravity=0.25
+                 graph_gravity=0.25,
                  path_html="horse_keplermapper_output.html")
 
 # You may want to visualize the original point cloud data in 3D scatter too
